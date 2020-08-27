@@ -13,7 +13,7 @@ app = Flask(__name__) #Creating app
 classifier = pickle.load(open('classifier_model.pkl','rb'))
 cv = pickle.load(open('countverctorizer.pkl','rb'))
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
     return render_template('home.html')
 
